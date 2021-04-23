@@ -1,5 +1,5 @@
 import { resolve } from 'path';
-import { CreatePageArgs, GatsbyNode } from "gatsby";
+import { GatsbyNode } from "gatsby";
 
 type PageData = {
   data?: {

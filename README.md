@@ -1,48 +1,19 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# my blog!
+*한번 블로그를 만들었다 터져본 경험이 있기에, 이번에는 좀더 신중히 아키텍쳐를 구성하려 한다.*
 
-## 🚀 Quick start
+## 주안점
+1. 성능 (lazy loading + 랜딩 페이지)
+  - post 수가 많아지면 랜딩 페이지의 로딩 속도가 느려지는 현상이 발생.
+2. typescript
+  - 개발시 오류 방지
+  - ts 없이는 살 수 없는 몸이 되어버렸기 때문에,, 
+  - 아키텍쳐 측면에서 type 선언등을 고려하며 개발할 계획
+3. markdown으로 기록하기
+  - 지난 버전의 블로그와 같지만, 이번에는 미리 가이드라인을 만들어서 제작하려 한다.
+4. 시리즈 및 태그 추가하기
+  - 시리즈 단위로 글을 쓸 것이기 때문에 시리즈별로 글을 볼 수 있는 기능을 추가하려고 한다.
 
-1.  **Create a Gatsby site.**
-
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
-
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
-
-2.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
-
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
-
-3.  **Open the code and start customizing!**
-
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.js` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## todolist
+1. 반응형 layout
+2. darkmode
+3. 검색 기준
