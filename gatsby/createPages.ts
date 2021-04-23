@@ -1,5 +1,5 @@
 import { resolve } from 'path';
-import { GatsbyNode } from "gatsby";
+import { GatsbyNode } from 'gatsby';
 
 type PageData = {
   data?: {
@@ -15,11 +15,10 @@ type PageData = {
   errors?: any
 }
 
-const createPages: GatsbyNode["createPages"] = async ({
+const createPages: GatsbyNode['createPages'] = async ({
   graphql,
   actions,
 }) => {
-
   const { createPage } = actions;
 
   const { data, errors }:PageData = await graphql(`
@@ -48,8 +47,8 @@ const createPages: GatsbyNode["createPages"] = async ({
         title: node.frontmatter.title,
       },
       component: resolve(__dirname, '../src/templates/blog-post.tsx'),
-    })
-  })
+    });
+  });
 };
 
 export { createPages };

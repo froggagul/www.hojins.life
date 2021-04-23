@@ -1,11 +1,10 @@
-import React from "react";
-import { PageProps } from "gatsby";
+import React from 'react';
 
-const IndexRoute = (props: PageProps) => {
+const IndexRoute = () => {
+  console.log('index');
   return (
     <>
-      <h1>Path:</h1>
-      <p>{props.path}</p>
+      <h1>Index</h1>
     </>
   );
 };

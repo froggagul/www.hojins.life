@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import React from 'react';
 import { ITemplateProps } from '../interface';
 
@@ -6,7 +7,7 @@ type IPostTemplateProps = ITemplateProps<{
   title: string;
 }>;
 
-const PostTemplate: React.FC<IPostTemplateProps> = React.memo(props => {
+const PostTemplate: React.FC<IPostTemplateProps> = React.memo((props: IPostTemplateProps) => {
   const { title, html } = props.pageContext;
 
   return (
@@ -19,5 +20,5 @@ const PostTemplate: React.FC<IPostTemplateProps> = React.memo(props => {
 });
 
 PostTemplate.displayName = 'PostTemplate';
-    
+
 export default PostTemplate;

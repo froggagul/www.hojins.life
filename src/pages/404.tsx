@@ -1,7 +1,7 @@
-import React from "react";
-import { PageProps } from "gatsby";
+import React from 'react';
 
-const IndexRoute = (props: PageProps) => {
+const IndexRoute = () => {
+  console.log('404');
   return (
     <>
       <h1>404 page</h1>

@@ -3,30 +3,30 @@ module.exports = {
     title: "hojin's note",
   },
   plugins: [
-    "gatsby-plugin-sass",
-    "gatsby-plugin-typescript",
-    "gatsby-transformer-remark",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
+    'gatsby-plugin-sass',
+    'gatsby-plugin-typescript',
+    'gatsby-transformer-remark',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sitemap',
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: "G-Z06PKTM3TV",
+        trackingId: 'G-Z06PKTM3TV',
       },
     },
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: "src/images/icon.png",
+        icon: 'src/images/icon.png',
       },
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "pages",
+        name: 'pages',
         path: `${__dirname}/posts`,
       },
-      __key: "pages",
+      __key: 'pages',
     },
   ],
 };
