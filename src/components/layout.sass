@@ -1,0 +1,82 @@
+@import "./mixin"
+
+
+
+
+@font-face
+    font-family: GraublauWeb
+    src: url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap')
+ 
+body
+    margin: 0px
+    width: 100vw
+    position: fixed
+
+header
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    width: 100%
+    height: auto
+    margin-bottom: 60px
+    font-family: 'Open Sans', sans-serif
+    .title
+        a
+            text-decoration: inherit
+            cursor: default
+            display: block
+            margin: 33px 0px 0px 7.7vw
+            font-weight: bold
+            font-size: 3rem
+            text-transform: uppercase
+            color: #000000
+    .nav
+        ul
+            list-style: none
+            display: flex
+            flex-direction: row
+            margin: 41.5px 4.4vw 0px 0px
+            padding: 0px
+            li
+                text-transform: uppercase
+                margin-left: 40px
+                font-size: 1.5rem
+                color: #000000
+                a
+                    text-decoration: inherit
+                    cursor: default
+                    color: #000000
+
+
+main
+    max-width: 800px
+    margin: 0px auto
+
+
+@include mobile
+    header
+        flex-direction: column
+        justify-content: normal
+        height: auto
+        margin-bottom: 30px
+        .title
+            margin: 48px auto 0px
+            div
+                font-size: 2.5rem
+                margin: 0px
+        .nav
+            ul
+                margin: 28px auto 0px
+                justify-content: space-between
+                width: 80%
+                li
+                    margin: 0px
+                li:last-child
+                    margin-left: 90px
+    main
+        width: 85%
+
+@include tablet
+    main
+        max-width: 750px
+
