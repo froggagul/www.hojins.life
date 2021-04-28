@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React from 'react';
 import './layout.sass';
 
@@ -16,13 +17,14 @@ const Layout = ({ children }: LayoutProps) => {
         <nav className="nav">
           <ul>
             <li>
-              TAG
+              <Link to="/series">
+                Series
+              </Link>
             </li>
             <li>
-              SERIES
-            </li>
-            <li>
-              CONTACT
+              <Link to="/contact">
+                contact
+              </Link>
             </li>
           </ul>
         </nav>

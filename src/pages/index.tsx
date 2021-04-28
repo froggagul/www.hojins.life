@@ -1,11 +1,12 @@
 import React from 'react';
+import Layout from '../components/layout';
 
 const IndexRoute = () => {
   console.log('index');
   return (
-    <>
-      <h1>Index</h1>
-    </>
+    <Layout>
+      <div>Index</div>
+    </Layout>
   );
 };
 
