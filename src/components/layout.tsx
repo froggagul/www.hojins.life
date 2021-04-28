@@ -12,7 +12,7 @@ const Layout = ({ children }: LayoutProps) => {
     <>
       <header>
         <div className="title">
-          <div>Hojin&apos;s Note</div>
+          <Link to="/">Hojin&apos;s Note</Link>
         </div>
         <nav className="nav">
           <ul>
