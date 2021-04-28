@@ -12,10 +12,20 @@ Making blog..🏗️
   - 아키텍쳐 측면에서 type 선언등을 고려하며 개발할 계획
 3. markdown으로 기록하기
   - 지난 버전의 블로그와 같지만, 이번에는 미리 가이드라인을 만들어서 제작하려 한다.
+  ```
+  title: string
+  date: YYYYMMDD
+  body: string
+  series: posts 폴더의 자손 폴더들의 이름으로 구분
+  ```
 4. 시리즈 및 태그 추가하기
   - 시리즈 단위로 글을 쓸 것이기 때문에 시리즈별로 글을 볼 수 있는 기능을 추가하려고 한다.
 
 ## todolist
-1. 반응형 layout
+1. ~~반응형 layout~~ `feature-layout`
 2. darkmode
 3. 검색 기준
+  * 문자열을 포함하는 곳에서 검색 가능
+  * `EP:"CS234 톺아보기"` or `EP:CS234`
+  * 검색 문자열 예시
+    * `CS234 EP:"CS234 톺아보기"`
