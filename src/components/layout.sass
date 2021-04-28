@@ -17,7 +17,8 @@ header
     flex-direction: row
     justify-content: space-between
     width: 100%
-    height: 240px
+    height: auto
+    margin-bottom: 60px
     font-family: 'Open Sans', sans-serif
     .title
         div
@@ -45,7 +46,7 @@ header
 
 
 main
-    width: 800px
+    max-width: 800px
     margin: 0px auto
 
 
@@ -53,18 +54,26 @@ main
     header
         flex-direction: column
         justify-content: normal
+        height: auto
+        margin-bottom: 30px
         .title
             margin: 48px auto 0px
             div
+                font-size: 2.5rem
                 margin: 0px
         .nav
             ul
                 margin: 28px auto 0px
-                justify-content: center
+                justify-content: space-between
+                width: 80%
                 li
                     margin: 0px
                 li:last-child
                     margin-left: 90px
-
+    main
+        width: 85%
 
 @include tablet
+    main
+        max-width: 750px
+
