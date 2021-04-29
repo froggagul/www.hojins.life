@@ -6,5 +6,7 @@ require('ts-node').register({
 });
 
 const { createPages } = require('./gatsby/createPages');
+const { createNode } = require('./gatsby/createNode');
 
 exports.createPages = createPages;
+exports.onCreateNode = createNode;
