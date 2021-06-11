@@ -2,6 +2,7 @@
 import React from 'react';
 import { ITemplateProps } from '../interface';
 import Layout from '../components/layout';
+import './blog-post.sass';
 
 type IPostTemplateProps = ITemplateProps<{
   html: string,
