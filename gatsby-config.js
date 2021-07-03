@@ -3,6 +3,7 @@ const Hangul = require('hangul-js');
 module.exports = {
   siteMetadata: {
     title: "hojin's note",
+    siteUrl: 'https://froggagul.github.io',
   },
   plugins: [
     'gatsby-plugin-sass',
