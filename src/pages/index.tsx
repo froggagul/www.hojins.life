@@ -28,7 +28,10 @@ const IndexRoute = ({
     localSearchPages: { index, store },
   },
 }: IndexRouteProps) => {
-  const { search } = window.location;
+  let search;
+  if (typeof window !== 'undefined') {
+    search = window.location.search;
+  }
   const query = new URLSearchParams(search).get('query');
   const [searchQuery, setSearchQuery] = React.useState(query || '');
   const results = useFlexSearch(searchQuery, index, store, { offset: 2 });
