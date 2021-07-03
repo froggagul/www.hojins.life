@@ -26,7 +26,7 @@ const createNode:GatsbyNode['onCreateNode'] = async({
 
     createNodeField({
       node,
-      name: 'slug',
+      name: 'path',
       value: `/posts${relativeFilePath}`,
     });
     createNodeField({

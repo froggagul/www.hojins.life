@@ -1,20 +1,55 @@
 import React from 'react';
+import { graphql } from 'gatsby';
+import useFlexSearch from '../components/hooks/useFlexSearch';
 import Layout from '../components/layout';
-import Search from '../components/search';
+import SearchBar from '../components/search';
 import Post from '../components/post';
 
-const IndexRoute = () => {
-  const [query, setQuery] = React.useState('');
+interface IndexRouteProps {
+  data: {
+    localSearchPages: {
+      index: string,
+      store: {
+        [id: string]: {
+          id: string,
+          title: string,
+          date: string,
+          path: string,
+          series?: string,
+          ep?: number | string,
+        }
+      },
+    }
+  }
+}
+
+const IndexRoute = ({
+  data: {
+    localSearchPages: { index, store },
+  },
+}: IndexRouteProps) => {
+  const { search } = window.location;
+  const query = new URLSearchParams(search).get('query');
+  const [searchQuery, setSearchQuery] = React.useState(query || '');
+  const results = useFlexSearch(searchQuery, index, store, undefined);
+
   return (
     <Layout>
-      <Search query={query} setQuery={setQuery} />
-      <Post title="오늘 퇴사했습니다." link="to" series="퇴사 시리즈 EP 1." />
-      <Post title="오늘 퇴사했습니다." link="to" series="퇴사 시리즈 EP 1." />
-      <Post title="오늘 퇴사했습니다." link="to" series="퇴사 시리즈 EP 1." />
-      <Post title="오늘 퇴사했습니다." link="to" series="퇴사 시리즈 EP 1." />
-      <Post title="오늘 퇴사했습니다." link="to" series="퇴사 시리즈 EP 1." />
+      <SearchBar query={searchQuery} setQuery={setSearchQuery} />
+      {results?.map((post) => (
+        <Post title={post.title} link={post.path} series={post.series ? `${post.series} Ep. ${post.ep}` : null} key={post.id} />
+      ))}
     </Layout>
   );
 };
+
+export const pageQuery = graphql`
+  query {
+    localSearchPages {
+      index
+      store
+    }
+  }
+`;
 
 export default IndexRoute;
