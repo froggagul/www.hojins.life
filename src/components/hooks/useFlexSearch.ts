@@ -63,6 +63,7 @@ const useSearch = (query: string, providedIndex?: string, store?: {
     };
     search(query, searchOptions);
   }, [query, index, store]);
+
   return result;
 };
 

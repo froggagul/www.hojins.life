@@ -1,13 +1,22 @@
+@import "./mixin"
+
 .searchWrapper
     width: 100%
     height: auto
     input
-        font-size: 2.5rem
+        box-sizing: border-box
         height: 55px
-        margin-bottom: 11px
-        margin-left: 23px
+        width: 100%
+        font-size: 2.5rem
+        padding: 0px 23px 11px
         border: 0px
         color: #707070
     input:focus
         outline: none
-
+@include mobile
+    .searchWrapper
+        input
+            font-size: 1.125rem
+            padding-bottom: 0px
+        hr
+            margin-block-start: 0px
