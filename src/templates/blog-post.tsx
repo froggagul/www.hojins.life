@@ -19,11 +19,12 @@ const PostTemplate: React.FC<IPostTemplateProps> = React.memo((props: IPostTempl
 
   return (
     <Layout>
-      <h2>{title}</h2>
-      {date && <h3>{date}</h3>}
-      {series && <h3>{series}</h3>}
-      <hr />
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <article>
+        <div className="title">{title}</div>
+        {series && <div className="series">{series}</div>}
+        {date && <div className="date">{date}</div>}
+        <div dangerouslySetInnerHTML={{ __html: html }} />
+      </article>
     </Layout>
   );
 });

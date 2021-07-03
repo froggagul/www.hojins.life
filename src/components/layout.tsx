@@ -21,11 +21,11 @@ const Layout = ({ children }: LayoutProps) => {
                 Series
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/contact">
                 contact
               </Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
       </header>
