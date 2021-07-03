@@ -12,7 +12,7 @@ interface PageData {
           date: string,
         }
         fields: {
-          slug: string,
+          path: string,
           series?: string,
         }
       },
@@ -48,7 +48,7 @@ const createPages: GatsbyNode['createPages'] = async ({
               date
             }
             fields {
-              slug
+              path
               series
             }
           }
@@ -61,7 +61,7 @@ const createPages: GatsbyNode['createPages'] = async ({
   }
   data?.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
-      path: node.fields.slug,
+      path: node.fields.path,
       context: {
         html: node.html,
         title: node.frontmatter.title,

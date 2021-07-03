@@ -6,37 +6,34 @@ interface LayoutProps {
     children: React.ReactNode;
 }
 
-const Layout = ({ children }: LayoutProps) => {
-  console.log('layout');
-  return (
-    <>
-      <header>
-        <div className="title">
-          <Link to="/">Hojin&apos;s Note</Link>
-        </div>
-        <nav className="nav">
-          <ul>
-            <li>
-              <Link to="/series">
-                Series
-              </Link>
-            </li>
-            {/* <li>
+const Layout = ({ children }: LayoutProps) => (
+  <>
+    <header>
+      <div className="title">
+        <Link to="/">Hojin&apos;s Note</Link>
+      </div>
+      <nav className="nav">
+        <ul>
+          <li>
+            <Link to="/series">
+              Series
+            </Link>
+          </li>
+          {/* <li>
               <Link to="/contact">
                 contact
               </Link>
             </li> */}
-          </ul>
-        </nav>
-      </header>
-      <main>
-        {children}
-      </main>
-      {/* <footer>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      {children}
+    </main>
+    {/* <footer>
         footer
       </footer> */}
-    </>
-  );
-};
+  </>
+);
 
 export default Layout;
