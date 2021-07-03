@@ -31,7 +31,7 @@ const IndexRoute = ({
   const { search } = window.location;
   const query = new URLSearchParams(search).get('query');
   const [searchQuery, setSearchQuery] = React.useState(query || '');
-  const results = useFlexSearch(searchQuery, index, store, undefined);
+  const results = useFlexSearch(searchQuery, index, store, { offset: 2 });
 
   return (
     <Layout>
