@@ -7,8 +7,9 @@ const useSearch = (query: string, providedIndex?: string, store?: {
     id: string,
     title: string,
     date: string,
-    series: string | null,
     path: string
+    series?: string,
+    ep?: number | string,
   }
 }, searchOptions? : SearchOptions) => {
   const [index, setIndex] = useState<Index<string>>();
@@ -50,7 +51,7 @@ const useSearch = (query: string, providedIndex?: string, store?: {
     // eslint-disable-next-line no-shadow
     const search = async (query: string, searchOptions?: SearchOptions) => {
       if (!query || !index || !store) {
-        if (query === '') {
+        if (query === '' && store) {
           setResult(Object.values(store));
         } else {
           setResult([]);

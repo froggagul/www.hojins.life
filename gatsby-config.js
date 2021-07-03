@@ -56,19 +56,22 @@ module.exports = {
                     frontmatter {
                       date
                       title
+                      ep
                     }
                   }
                 }
               }
             }`,
         ref: 'id',
-        index: ['title', 'series'],
-        store: ['id', 'title', 'date', 'series', 'path'],
+        index: ['title', 'seriesTerm'],
+        store: ['id', 'title', 'date', 'series', 'path', 'ep'],
         normalizer: ({ data }) => data.allMarkdownRemark.edges.map(({ node }) => ({
           id: node.id,
           date: node.frontmatter.date,
           title: node.frontmatter.title,
+          ep: node.frontmatter.ep,
           series: node.fields.series,
+          seriesTerm: node.fields.series ? `${node.fields.series} Ep. ${node.frontmatter.ep}` : null,
           path: node.fields.path,
         })),
       },

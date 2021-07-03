@@ -10,6 +10,7 @@ interface PageData {
         frontmatter: {
           title: string,
           date: string,
+          ep: number | string,
         }
         fields: {
           path: string,
@@ -46,6 +47,7 @@ const createPages: GatsbyNode['createPages'] = async ({
             frontmatter {
               title
               date
+              ep
             }
             fields {
               path
@@ -59,6 +61,7 @@ const createPages: GatsbyNode['createPages'] = async ({
   if (errors) {
     throw errors;
   }
+
   data?.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.path,
@@ -67,6 +70,7 @@ const createPages: GatsbyNode['createPages'] = async ({
         title: node.frontmatter.title,
         date: parseDate(node.frontmatter.date),
         series: node.fields.series,
+        ep: node.frontmatter.ep,
       },
       component: resolve(__dirname, '../src/templates/blog-post.tsx'),
     });

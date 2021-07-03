@@ -14,8 +14,9 @@ interface IndexRouteProps {
           id: string,
           title: string,
           date: string,
-          series: string | null,
-          path: string
+          path: string,
+          series?: string,
+          ep?: number | string,
         }
       },
     }
@@ -36,7 +37,7 @@ const IndexRoute = ({
     <Layout>
       <SearchBar query={searchQuery} setQuery={setSearchQuery} />
       {results?.map((post) => (
-        <Post title={post.title} link={post.path} series={post.series} key={post.id} />
+        <Post title={post.title} link={post.path} series={post.series ? `${post.series} Ep. ${post.ep}` : null} key={post.id} />
       ))}
     </Layout>
   );

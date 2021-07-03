@@ -4,15 +4,15 @@ import './post.sass';
 
 interface PostProps {
   title: string;
-  series: string
   link: string;
+  series: string | null;
 }
 
 export default ({ title, series, link }: PostProps) => (
   <div className="singlePostWrapper">
     <Link to={link}>
       <div className="title">{title}</div>
-      <div className="series">{series}</div>
+      {series && <div className="series">{series}</div>}
     </Link>
   </div>
 );
