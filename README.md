@@ -16,18 +16,18 @@ Making blog..🏗️
   title: string
   date: YYYYMMDD
   body: string
-  series: posts 폴더의 자손 폴더들의 이름으로 구분
   ```
+  - series: posts 폴더의 자손 폴더들의 이름으로 구분
+  
 4. 시리즈 및 태그 추가하기
   - 시리즈 단위로 글을 쓸 것이기 때문에 시리즈별로 글을 볼 수 있는 기능을 추가하려고 한다.
 
 ## todolist
 1. ~~반응형 layout~~ `feature-layout`
 2. darkmode
-3. 검색 기준
-  * 문자열을 포함하는 곳에서 검색 가능
-  * `EP:"CS234 톺아보기"` or `S:CS234`
-  * 검색 문자열 예시
-    * `S:"CS234 톺아보기"`
-    * `CS234 S:"CS234 톺아보기"`
-    * `CS234`
+3. ~~검색 기준~~
+  * title, series 기준으로 검색
+4. SEO
+5. ~~Google Analytics~~
+6. RSS, sitemap
+
