@@ -1,19 +1,35 @@
 import { resolve } from 'path';
 import { GatsbyNode } from 'gatsby';
 
-type PageData = {
-  data?: {
-    allMarkdownRemark: {
-      edges: {
-        node: {
-          id: string,
-          html: string,
-        },
-      }[],
-    }
-  },
-  errors?: any
+interface PageData {
+  allMarkdownRemark: {
+    edges: {
+      node: {
+        id: string,
+        html: string,
+        frontmatter: {
+          title: string,
+          date: string,
+        }
+        fields: {
+          slug: string,
+          series?: string,
+        }
+      },
+    }[],
+  }
 }
+
+const parseDate = (dateString: string) => {
+  const parts = dateString.split('-');
+
+  const date = new Date(
+    parseInt(parts[0], 10),
+    parseInt(parts[1], 10) - 1,
+    parseInt(parts[2], 10),
+  );
+  return date.toDateString();
+};
 
 const createPages: GatsbyNode['createPages'] = async ({
   graphql,
@@ -21,7 +37,7 @@ const createPages: GatsbyNode['createPages'] = async ({
 }) => {
   const { createPage } = actions;
 
-  const { data, errors }:PageData = await graphql(`
+  const { data, errors } = await graphql<PageData>(`
     {
       allMarkdownRemark {
         edges {
@@ -29,6 +45,11 @@ const createPages: GatsbyNode['createPages'] = async ({
             html
             frontmatter {
               title
+              date
+            }
+            fields {
+              slug
+              series
             }
           }
         }
@@ -38,13 +59,14 @@ const createPages: GatsbyNode['createPages'] = async ({
   if (errors) {
     throw errors;
   }
-
-  data?.allMarkdownRemark.edges.forEach(({ node }: any) => {
+  data?.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
-      path: node.frontmatter.title,
+      path: node.fields.slug,
       context: {
         html: node.html,
         title: node.frontmatter.title,
+        date: parseDate(node.frontmatter.date),
+        series: node.fields.series,
       },
       component: resolve(__dirname, '../src/templates/blog-post.tsx'),
     });
