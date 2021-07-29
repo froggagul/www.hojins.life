@@ -22,6 +22,7 @@
             font-size: 2rem
             text-overflow: ellipsis
             overflow: hidden
+            white-space: nowrap
         .series
             position: absolute
             top: 12px
@@ -49,3 +50,10 @@
     background-color: #073B4C
     a
         color: #ffffff
+
+@include mobile
+    .singlePostWrapper
+        a
+            .title
+                width: 90%
+                

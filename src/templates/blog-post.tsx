@@ -17,7 +17,6 @@ const PostTemplate: React.FC<IPostTemplateProps> = React.memo((props: IPostTempl
   const {
     title, html, date, series, ep,
   } = props.pageContext;
-  console.log(props.pageContext);
 
   return (
     <Layout>
