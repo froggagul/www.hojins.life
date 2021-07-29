@@ -30,9 +30,14 @@ const Layout = ({ children }: LayoutProps) => (
     <main>
       {children}
     </main>
-    {/* <footer>
-        footer
-      </footer> */}
+    <footer>
+      <span className="copyright">
+        ⓒ 2021. (Jung Hojin) all rights reserved.
+      </span>
+      {/* <span className="theme">
+        Theme by froggagul
+      </span> */}
+    </footer>
   </>
 );
 
