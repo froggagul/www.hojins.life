@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { ITemplateProps } from '../interface';
 import Layout from '../components/layout';
+import SEO from '../components/seo';
 import './blog-post.sass';
 
 type IPostTemplateProps = ITemplateProps<{
@@ -20,6 +21,7 @@ const PostTemplate: React.FC<IPostTemplateProps> = React.memo((props: IPostTempl
 
   return (
     <Layout>
+      <SEO title={title} article />
       <article>
         <div className="title">{title}</div>
         {series && (

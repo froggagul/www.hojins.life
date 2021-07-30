@@ -2,14 +2,20 @@ const Hangul = require('hangul-js');
 
 module.exports = {
   siteMetadata: {
-    title: "hojin's note",
+    title: "Hojin's Note",
+    titleTemplate: "Hojin's Note | %s",
     siteUrl: 'https://froggagul.github.io',
+    description: 'I\'m writing my own feelings on this blog',
+    twitterUsername: 'froggagul',
   },
   plugins: [
     'gatsby-plugin-sass',
     'gatsby-plugin-typescript',
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp', // Needed for dynamic images
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-google-gtag',
@@ -32,9 +38,16 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'pages',
-        path: `${__dirname}/posts`,
+        path: `${__dirname}/content/posts`,
       },
       __key: 'pages',
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content/assets`,
+        name: 'assets',
+      },
     },
     {
       resolve: 'gatsby-plugin-local-search',

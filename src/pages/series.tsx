@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import Series from '../components/series';
+import SEO from '../components/seo';
 
 interface IndexRouteProps {
   data: {
@@ -41,6 +42,7 @@ const IndexRoute = ({
   });
   return (
     <Layout>
+      <SEO title="series" />
       {Object.keys(counts).map((key) => {
         const count = counts[key];
         return (

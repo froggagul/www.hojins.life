@@ -1,5 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
+import SEO from './seo';
 import './layout.sass';
 
 interface LayoutProps {
@@ -8,6 +9,7 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => (
   <>
+    <SEO />
     <header>
       <div className="title">
         <Link to="/">Hojin&apos;s Note</Link>

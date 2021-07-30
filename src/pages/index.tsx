@@ -4,6 +4,7 @@ import useFlexSearch from '../components/hooks/useFlexSearch';
 import Layout from '../components/layout';
 import SearchBar from '../components/search';
 import Post from '../components/post';
+import SEO from '../components/seo';
 
 interface IndexRouteProps {
   data: {
@@ -38,6 +39,7 @@ const IndexRoute = ({
 
   return (
     <Layout>
+      <SEO title="home" />
       <SearchBar query={searchQuery} setQuery={setSearchQuery} />
       {results?.map((post) => (
         <Post title={post.title} link={post.path} series={post.series ? `${post.series} Ep. ${post.ep}` : null} key={post.id} />

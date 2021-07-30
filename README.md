@@ -30,4 +30,6 @@ Making blog..🏗️
 4. SEO
 5. ~~Google Analytics~~
 6. RSS, sitemap
+7. series 기준으로 prev next 제공
+8. google ads
 
