@@ -10,25 +10,23 @@ interface SEOTypes {
   article?: boolean,
 }
 
-const query = graphql`
-query SEO {
-  site {
-    siteMetadata {
-      defaultTitle: title
-      titleTemplate
-      defaultDescription: description
-      siteUrl
-      twitterUsername
-    }
-  }
-}
-`;
-
 const SEO = ({
   title = '', description = '', image = '', article = false,
 }: SEOTypes) => {
   const pathname = typeof window !== 'undefined' ? window.location.href : '';
-  const { site } = useStaticQuery(query);
+  const { site } = useStaticQuery(graphql`
+  query SEO {
+    site {
+      siteMetadata {
+        defaultTitle: title
+        titleTemplate
+        defaultDescription: description
+        siteUrl
+        twitterUsername
+      }
+    }
+  }
+  `);
 
   const {
     defaultTitle,

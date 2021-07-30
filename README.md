@@ -27,7 +27,7 @@ Making blog..🏗️
 2. darkmode
 3. ~~검색 기준~~
   * title, series 기준으로 검색
-4. SEO
+4. ~~SEO~~
 5. ~~Google Analytics~~
 6. RSS, sitemap
 7. series 기준으로 prev next 제공
