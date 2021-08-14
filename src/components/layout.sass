@@ -7,8 +7,12 @@
 body
     margin: 0px
     width: 100vw
-    min-height: 100vh
     overflow-x: hidden
+
+#gatsby-focus-wrapper
+    min-height: 100vh
+    display: flex
+    flex-direction: column
 
 header
     display: flex
@@ -47,8 +51,10 @@ header
 main
     max-width: 800px
     margin: 0px auto
+    flex: 1
 
 footer
+    width: 100%
     max-width: 800px
     margin: 8rem auto 0px
     height: 40px
