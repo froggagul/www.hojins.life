@@ -43,12 +43,9 @@ const IndexRoute = ({
   return (
     <Layout>
       <SEO title="series" />
-      {Object.keys(counts).map((key) => {
-        const count = counts[key];
-        return (
-          <Series series={key} count={count} key={key} />
-        );
-      })}
+      {Object.keys(counts).map((key) => (
+        <Series series={key} count={counts[key]} key={key} />
+      ))}
     </Layout>
   );
 };

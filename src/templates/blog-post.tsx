@@ -33,7 +33,7 @@ const PostTemplate: React.FC<IPostTemplateProps> = React.memo((props: IPostTempl
         </div>
         )}
         {date && <div className="date">{date}</div>}
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <div className="post" dangerouslySetInnerHTML={{ __html: html }} />
       </article>
     </Layout>
   );

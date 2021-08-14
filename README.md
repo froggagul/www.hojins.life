@@ -31,5 +31,6 @@ Making blog..🏗️
 5. ~~Google Analytics~~
 6. RSS, sitemap
 7. series 기준으로 prev next 제공
-8. google ads
-
+8. 댓글 기능
+9. google ads
+10. 
