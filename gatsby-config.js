@@ -95,5 +95,59 @@ module.exports = {
         })),
       },
     },
+    {
+      resolve: 'gatsby-plugin-feed',
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            // eslint-disable-next-line max-len
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              console.log(site);
+              return allMarkdownRemark.edges.map((edge) => ({
+                ...edge.node.frontmatter,
+                description: edge.node.excerpt,
+                date: edge.node.frontmatter.date,
+                url: site.siteMetadata.siteUrl + edge.node.fields.path,
+                guid: site.siteMetadata.siteUrl + edge.node.fields.path,
+                custom_elements: [{ 'content:encoded': edge.node.html, series: edge.node.fields.series }],
+              }));
+            },
+            query: `
+              {
+                allMarkdownRemark {
+                  edges {
+                    node {
+                      fields {
+                        series
+                        path
+                      }
+                      html
+                      frontmatter {
+                        date
+                      }
+                      excerpt
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/rss.xml',
+            title: "Hojin's Note | rss",
+            match: '^/posts/',
+          },
+        ],
+      },
+    },
   ],
 };
