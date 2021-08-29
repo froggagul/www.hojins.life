@@ -56,14 +56,21 @@ main
 footer
     width: 100%
     max-width: 800px
-    margin: 8rem auto 0px
+    margin: 6rem auto 0px
     height: 40px
     border-top: 1px solid black
-    .copyright
-        display: block
-        margin: 8px auto 8px 8px
+    display: inline-flex
+    justify-content: space-around
+    span
+        margin: 8px 8px 0px 8px
         text-align: left
         font-size: 0.5rem
+        a
+            text-decoration: inherit
+            color: #000000
+    .space
+        flex: auto
+
 
 
 @include mobile
