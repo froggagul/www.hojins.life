@@ -1,1 +1,5 @@
-{"componentChunkName":"component---src-templates-blog-post-tsx","path":"/posts/동아리 회장 생존기/1/","result":{"pageContext":{"html":"<p>작성중..</p>","title":"내가 무슨 부귀를 누리자고","date":"Fri Jul 30 2021","series":"동아리 회장 생존기","ep":1}},"staticQueryHashes":["2492723766"]}
+{
+    "componentChunkName": "component---src-templates-blog-post-tsx",
+    "path": "/posts/동아리 회장 생존기/1/",
+    "result": {"pageContext":{"html":"<p>작성중..</p>","title":"내가 무슨 부귀를 누리자고","date":"Fri Jul 30 2021","series":{"series":"동아리 회장 생존기","ep":1,"max":1},"next":null}},
+    "staticQueryHashes": ["2492723766"]}

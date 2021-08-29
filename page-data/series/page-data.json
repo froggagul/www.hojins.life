@@ -1,1 +1,5 @@
-{"componentChunkName":"component---src-pages-series-tsx","path":"/series/","result":{"data":{"allMarkdownRemark":{"edges":[{"node":{"id":"78c93bd1-5471-5d3c-b43e-efa42bb3b18b","fields":{"series":"글쓰는 사람으로 성장하기"}}},{"node":{"id":"b9d91502-07df-53d8-9fc9-be50b11e1077","fields":{"series":"글쓰는 사람으로 성장하기"}}},{"node":{"id":"78c66a48-cf60-5047-bb6c-9666bde6bef5","fields":{"series":"글쓰는 사람으로 성장하기"}}},{"node":{"id":"42b53591-d8c4-5cfd-bbd2-2969647ebe0c","fields":{"series":"글쓰는 사람으로 성장하기"}}},{"node":{"id":"a5526fab-53aa-5f51-bd98-2f871351e903","fields":{"series":"동아리 회장 생존기"}}}]}},"pageContext":{}},"staticQueryHashes":["2492723766"]}
+{
+    "componentChunkName": "component---src-pages-series-tsx",
+    "path": "/series/",
+    "result": {"data":{"allMarkdownRemark":{"edges":[{"node":{"id":"78c93bd1-5471-5d3c-b43e-efa42bb3b18b","fields":{"series":"글쓰는 사람으로 성장하기"}}},{"node":{"id":"b9d91502-07df-53d8-9fc9-be50b11e1077","fields":{"series":"글쓰는 사람으로 성장하기"}}},{"node":{"id":"78c66a48-cf60-5047-bb6c-9666bde6bef5","fields":{"series":"글쓰는 사람으로 성장하기"}}},{"node":{"id":"42b53591-d8c4-5cfd-bbd2-2969647ebe0c","fields":{"series":"글쓰는 사람으로 성장하기"}}},{"node":{"id":"a5526fab-53aa-5f51-bd98-2f871351e903","fields":{"series":"동아리 회장 생존기"}}}]}},"pageContext":{}},
+    "staticQueryHashes": ["2492723766"]}
