@@ -9,7 +9,7 @@ const getSeries = (relativeFilePath: string) => {
   return undefined;
 };
 
-const createNode:GatsbyNode['onCreateNode'] = async({
+const createNode:GatsbyNode['onCreateNode'] = async ({
   node,
   getNode,
   actions,

@@ -4,20 +4,22 @@ import { GatsbyNode } from 'gatsby';
 interface PageData {
   allMarkdownRemark: {
     edges: {
-      node: {
-        id: string,
-        html: string,
-        frontmatter: {
-          title: string,
-          date: string,
-          ep: number | string,
-        }
-        fields: {
-          path: string,
-          series?: string,
-        }
-      },
+      node: PageNode,
     }[],
+  }
+}
+
+export interface PageNode {
+  id: string,
+  html: string,
+  frontmatter: {
+    title: string,
+    date: string,
+    ep: number,
+  }
+  fields: {
+    path: string,
+    series?: string,
   }
 }
 
@@ -61,16 +63,33 @@ const createPages: GatsbyNode['createPages'] = async ({
   if (errors) {
     throw errors;
   }
+  const seriesInfo: { [id: string]: { count: number, [ep: number]: PageNode } } = {};
+  data?.allMarkdownRemark.edges.forEach(({ node }) => {
+    const { series } = node.fields;
+    const { ep } = node.frontmatter;
+    if (series) {
+      seriesInfo[series] = seriesInfo[series] || { count: 0 };
+      seriesInfo[series].count = seriesInfo[series].count < ep ? ep : seriesInfo[series].count;
+      seriesInfo[series][ep] = node;
+    }
+  });
 
   data?.allMarkdownRemark.edges.forEach(({ node }) => {
+    const { ep, title } = node.frontmatter;
+    const { path, series } = node.fields;
     createPage({
-      path: node.fields.path,
+      path,
       context: {
         html: node.html,
-        title: node.frontmatter.title,
+        title,
         date: parseDate(node.frontmatter.date),
-        series: node.fields.series,
-        ep: node.frontmatter.ep,
+        series: {
+          series,
+          ep,
+          max: series && seriesInfo[series].count,
+        },
+        prev: ep > 0 && series ? seriesInfo[series][ep - 1] : null,
+        next: series && ep < seriesInfo[series].count ? seriesInfo[series][ep + 1] : null,
       },
       component: resolve(__dirname, '../src/templates/blog-post.tsx'),
     });

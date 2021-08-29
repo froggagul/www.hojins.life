@@ -27,10 +27,35 @@ article
         font-family: inherit
         margin-bottom: 56px
 
-
+    .bottom
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        margin-top: 3rem
+        flex-wrap: wrap
+        .prev, .next
+            font-size: 1.5rem
+            a
+                text-decoration: inherit
+                color: inherit
 
 @include mobile
     article
         margin-top: 87px
         .post
             font-size: 18px
+        .bottom
+            flex-direction: column
+            justify-content: center
+            
+            .prex, .next
+                a
+                    display: block
+                    width: 100%
+                    margin: 2px 0px 
+            .prev
+                a
+                    text-align: left
+            .next
+                a
+                    text-align: right
