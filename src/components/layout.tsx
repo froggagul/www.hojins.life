@@ -50,7 +50,7 @@ const Layout = ({ children }: LayoutProps) => (
         </Link>
       </span>
       <span className="right">
-        <Link to="/sitemap.xml">
+        <Link to="/sitemap/sitemap-index.xml">
           sitemap
         </Link>
       </span>
