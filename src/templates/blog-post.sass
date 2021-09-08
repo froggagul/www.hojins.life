@@ -27,6 +27,28 @@ article
         font-family: inherit
         margin-bottom: 56px
 
+    .post
+        code
+            font-family: "Consolas", "Menlo", "Monaco", monospace, serif
+            white-space: normal
+        a
+            text-decoration: none
+        a:hover
+            text-decoration: underline
+        h1
+            margin-top: 0
+            font-size: 2em
+        figure
+            width: 60%
+            margin: auto
+            padding-bottom: 1rem
+        figcaption
+            text-align: center
+            color: #666666
+        blockquote
+            color: #888888
+            padding-left: 8px
+            border-left: 4px solid black
     .bottom
         display: flex
         flex-direction: row
@@ -38,12 +60,17 @@ article
             a
                 text-decoration: inherit
                 color: inherit
+            a:hover
+                text-decoration: underline
+
 
 @include mobile
     article
         margin-top: 87px
         .post
             font-size: 18px
+            figure
+                width: 90%
         .bottom
             flex-direction: column
             justify-content: center
