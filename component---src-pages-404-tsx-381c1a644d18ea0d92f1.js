@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkhojin_s_note=self.webpackChunkhojin_s_note||[]).push([[218],{9786:function(e,n,t){t.r(n);var l=t(7294),u=t(4471);n.default=function(){return console.log("404"),l.createElement(l.Fragment,null,l.createElement(u.Z,{title:"404"}),l.createElement("h1",null,"404"))}}}]);
-//# sourceMappingURL=component---src-pages-404-tsx-381c1a644d18ea0d92f1.js.map
