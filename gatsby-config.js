@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: "Hojin's Note",
     titleTemplate: "Hojin's Note | %s",
-    siteUrl: 'https://froggagul.github.io',
+    siteUrl: 'https://www.hojins.life',
     description: 'I\'m writing my own feelings on this blog',
     twitterUsername: 'froggagul',
   },
