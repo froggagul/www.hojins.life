@@ -36,8 +36,6 @@ const SEO = ({
     twitterUsername,
   } = site.siteMetadata;
 
-  console.log(defaultImage);
-
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
