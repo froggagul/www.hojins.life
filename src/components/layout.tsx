@@ -1,6 +1,5 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
 import SEO from './seo';
 import './layout.sass';
 

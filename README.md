@@ -30,9 +30,9 @@ Making blog..🏗️
 4. ~~SEO~~
 5. ~~Google Analytics~~
 6. ~~RSS, sitemap~~
-7. series 기준으로 prev next 제공
-  * 
+7. ~~series 기준으로 prev next 제공~~
 8. 댓글 기능
+  * 개발자가 아닌, 외부사람들이 사용할 수 있는 댓글창이 무엇이 있을까..
 9. ~~google ads~~
   * deprecated: no google ads on private blogs!
-10. footer design
+10. ~~footer design~~
