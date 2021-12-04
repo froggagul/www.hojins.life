@@ -17,15 +17,15 @@ const Layout = ({ children }: LayoutProps) => (
       <nav className="nav">
         <ul>
           <li>
+            <Link to="https://dev.hojins.life">
+              Portfolio
+            </Link>
+          </li>
+          <li>
             <Link to="/series">
               Series
             </Link>
           </li>
-          {/* <li>
-              <Link to="/contact">
-                contact
-              </Link>
-            </li> */}
         </ul>
       </nav>
     </header>
@@ -40,6 +40,11 @@ const Layout = ({ children }: LayoutProps) => (
         {'Theme by '}
         <Link to="https://github.com/froggagul">
           froggagul
+        </Link>
+      </span>
+      <span>
+        <Link to="https://m.blog.naver.com/kcy0905a">
+          ❤️
         </Link>
       </span>
       <span className="space" />
