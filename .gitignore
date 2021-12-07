@@ -4,3 +4,7 @@ public
 yarn.lock
 yarn-error.log
 package-lock.json
+
+
+# writing stuffs
+*.temp
