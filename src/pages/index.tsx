@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import useFlexSearch from '../components/hooks/useFlexSearch';
+import useFlexSearch from '../hooks/useFlexSearch';
 import Layout from '../components/layout';
 import SearchBar from '../components/search';
 import Post from '../components/post';
