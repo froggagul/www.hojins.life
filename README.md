@@ -36,3 +36,15 @@ Making blog..🏗️
 9. ~~google ads~~
   * deprecated: no google ads on private blogs!
 10. ~~footer design~~
+11. table of contents
+  * floats on rightside when pc (doesnt support mobile)
+12. BucketList page
+  * 각 항목 별로
+    * 제목
+    * 간단한 설명
+    * 기록 날짜
+    * 체크 표시 보여줌
+      * 체크 O - 달성날짜와 함께
+    * 관련 blog 글 연동 가능 (링크들 첨부 가능)
+    * 소 로드맵을 하나 만들까?
+  * bucketlist page 만들기
