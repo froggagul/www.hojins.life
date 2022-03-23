@@ -46,5 +46,5 @@ Making blog..🏗️
     * 체크 표시 보여줌
       * 체크 O - 달성날짜와 함께
     * 관련 blog 글 연동 가능 (링크들 첨부 가능)
-    * 소 로드맵을 하나 만들까?
+    * subtask를 하나 만들까?
   * bucketlist page 만들기
