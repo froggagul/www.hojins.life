@@ -7,7 +7,7 @@ const IndexRoute = () => (
   <Layout>
     <SEO title="404" />
     <h1 className="">404!</h1>
-    <h2 className="">페이지가 안보이네요... 혹시 이걸 찾으셨나요?!</h2>
+    <h2 className="">404 아이디어 추천받습니다 :D</h2>
   </Layout>
 );
 

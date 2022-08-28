@@ -48,3 +48,5 @@ Making blog..🏗️
     * 관련 blog 글 연동 가능 (링크들 첨부 가능)
     * subtask를 하나 만들까?
   * bucketlist page 만들기
+13. Animation
+  * 
