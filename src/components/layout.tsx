@@ -42,11 +42,6 @@ const Layout = ({ children }: LayoutProps) => (
           froggagul
         </Link>
       </span>
-      <span>
-        <Link to="https://m.blog.naver.com/kcy0905a">
-          ❤️
-        </Link>
-      </span>
       <span className="space" />
       <span className="right">
         <Link to="/rss.xml">
