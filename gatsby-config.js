@@ -122,17 +122,14 @@ module.exports = {
         feeds: [
           {
             // eslint-disable-next-line max-len
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              console.log(site);
-              return allMarkdownRemark.edges.map((edge) => ({
-                ...edge.node.frontmatter,
-                description: edge.node.excerpt,
-                date: edge.node.frontmatter.date,
-                url: site.siteMetadata.siteUrl + edge.node.fields.path,
-                guid: site.siteMetadata.siteUrl + edge.node.fields.path,
-                custom_elements: [{ 'content:encoded': edge.node.html, series: edge.node.fields.series }],
-              }));
-            },
+            serialize: ({ query: { site, allMarkdownRemark } }) => allMarkdownRemark.edges.map((edge) => ({
+              ...edge.node.frontmatter,
+              description: edge.node.excerpt,
+              date: edge.node.frontmatter.date,
+              url: site.siteMetadata.siteUrl + edge.node.fields.path,
+              guid: site.siteMetadata.siteUrl + edge.node.fields.path,
+              custom_elements: [{ 'content:encoded': edge.node.html, series: edge.node.fields.series }],
+            })),
             query: `
               {
                 allMarkdownRemark {
@@ -155,6 +152,20 @@ module.exports = {
             output: '/rss.xml',
             title: "Hojin's Note | rss",
             match: '^/posts/',
+          },
+        ],
+      },
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-embed-youtube',
+            options: {
+              width: 800,
+              height: 400,
+            },
           },
         ],
       },
