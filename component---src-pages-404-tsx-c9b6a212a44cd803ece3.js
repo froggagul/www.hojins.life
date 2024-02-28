@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkhojin_s_note=self.webpackChunkhojin_s_note||[]).push([[296],{2052:function(e,t,n){n.r(t);var a=n(1504),c=n(7536),l=n(1676);t.default=()=>a.createElement(c.c,null,a.createElement(l.c,{title:"404"}),a.createElement("h1",{className:""},"404!"),a.createElement("h2",{className:""},"404 아이디어 추천받습니다 :D"))}}]);
-//# sourceMappingURL=component---src-pages-404-tsx-c9b6a212a44cd803ece3.js.map
