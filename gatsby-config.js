@@ -22,10 +22,13 @@ module.exports = {
               showCaptions: true,
             },
           },
-          // {
-          //   resolve: 'gatsby-remark-figure-caption',
-          //   options: { figureClassName: 'md-figure' },
-          // },
+          {
+            resolve: 'gatsby-remark-embed-youtube',
+            options: {
+              width: 800,
+              height: 400,
+            },
+          },
         ],
       },
     },
@@ -152,20 +155,6 @@ module.exports = {
             output: '/rss.xml',
             title: "Hojin's Note | rss",
             match: '^/posts/',
-          },
-        ],
-      },
-    },
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
-          {
-            resolve: 'gatsby-remark-embed-youtube',
-            options: {
-              width: 800,
-              height: 400,
-            },
           },
         ],
       },
